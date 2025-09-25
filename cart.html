@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - BiYu Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 BiYu Shop</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <button onclick="toggleDarkMode()">🌙</button>
+    </nav>
+  </header>
+
+  <section class="cart" id="cartItems"></section>
+  <section class="cart-total">
+    <h2>Total: $<span id="totalPrice">0</span></h2>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Biyu Shop</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

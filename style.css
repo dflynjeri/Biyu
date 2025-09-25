@@ -1,0 +1,164 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;line-height:1.6;background:#f9f9f9;color:#333;transition:all 0.3s;}
+header{background:#007BFF;color:white;padding:15px;display:flex;justify-content:space-between;align-items:center;}
+nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
+.hero{text-align:center;padding:50px;background:linear-gradient(120deg,#007BFF,#00C6FF);color:white;}
+.btn{background:#007BFF;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;}
+.btn:hover{background:#0056b3;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px;}
+.card{background:white;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.card img{width:100%;border-radius:5px;}
+.cart-item{display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #ccc;}
+.dark-mode{background:#222;color:#eee;}
+.dark-mode header{background:#111;}
+.dark-mode .card{background:#333;color:#eee;}
+@media(max-width:600px){nav{flex-direction:column;}}
+/* Reset + Layout */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+  color: #333;
+  transition: all 0.3s;
+}
+
+/* Header */
+header {
+  background:#007BFF;
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
+
+/* Hero Section */
+.hero {
+  text-align:center;
+  padding:60px 20px;
+  background: linear-gradient(120deg, #007BFF, #00C6FF);
+  color:white;
+  border-radius: 0 0 20px 20px;
+}
+.hero .btn {
+  background:white;
+  color:#007BFF;
+  padding:10px 20px;
+  border-radius:5px;
+  text-decoration:none;
+}
+.hero .btn:hover { background:#e6e6e6; }
+
+/* Buttons */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+/* Buttons */
+button, .btn {
+  background:#007BFF;
+  color:white;
+  padding:10px 15px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition: background 0.3s;
+}
+button:hover, .btn:hover { background:#0056b3; }
+
+/* Cards + Grid */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+.card {
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.card:hover { transform: scale(1.03); }
+.card img { width:100%; border-radius:5px; }
+/* Cart + Orders */
+.cart-item, .order {
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  border-bottom:1px solid #ccc;
+  transition: transform 0.2s ease;
+}
+.cart-item:hover, .order:hover { transform: scale(1.02); }
+
+/* Footer (sticks to bottom) */
+footer {
+  margin-top:auto;
+  background:#007BFF;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* Dark Mode */
+.dark-mode { background:#222; color:#eee; }
+.dark-mode header { background:#111; }
+.dark-mode .card { background:#333; color:#eee; }
+.dark-mode footer { background:#111; }
+
+/* Mobile */
+@media(max-width:600px){
+  nav { flex-direction:column; }
+  .cart-item { flex-direction:column; align-items:flex-start; }
+}
+body {
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+  background-image: radial-gradient(#dbe9ff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+body {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+}
+body::before {
+  content:"";
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: url('https://www.transparenttextures.com/patterns/wavecut.png');
+  opacity:0.2;
+  pointer-events:none;
+}
+
+.dark-mode {
+  background: linear-gradient(to bottom right, #111, #333);
+}
+.dark-mode::before {
+  content:"";
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  opacity:0.1;
+  pointer-events:none;
+}
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 15px; /* space before button */
+}
+
+.hero .btn {
+  margin-top: 15px; /* extra padding */
+  display: inline-block;
+}
